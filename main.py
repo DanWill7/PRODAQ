@@ -2,8 +2,15 @@
 # Author: Daniel Williams
 # Date Created: 12/5/2020 5:42PM
 
+
+import ProDAQ as daq
+
+
 def main():
-    print("Finished")
+    value = daq.test
+    # references the prodaq file udf test
+
+    print(value)
 
 
 if __name__ == "__main__":
