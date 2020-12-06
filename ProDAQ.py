@@ -46,7 +46,7 @@ def live_plot(filepath: str):
 
     ani = animation.FuncAnimation(fig, animate, interval=100)
     mng = plt.get_current_fig_manager()
-    mng.full_screen_toggle()
+    mng.window.state('zoomed')
     plt.show()
 
     return
