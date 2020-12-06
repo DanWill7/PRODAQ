@@ -20,7 +20,8 @@ while(counter < df.shape[0]):
 
     num1 = float(df.iloc[counter, [0]])
     num2 = float(df.iloc[counter, [1]])
-    string = str(num1) + "," + str(num2) + "\n"
+    num3 = float(df.iloc[counter, [2]])
+    string = str(num1) + "," + str(num2) + "," + str(num3) + "\n"
     file = open("test.txt", 'a')
     file.write(string)
     counter = counter + 1
