@@ -2,7 +2,6 @@
 # Author: Daniel Williams
 # Date Created: 12/5/2020 5:42PM
 
-
 import ProDAQ as daq
 
 
