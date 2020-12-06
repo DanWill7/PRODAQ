@@ -7,10 +7,10 @@ import ProDAQ as daq
 
 
 def main():
-    value = daq.test
-    # references the prodaq file udf test
-
-    print(value)
+    filepath = "test.txt"
+    # location of txt file with data
+    daq.live_plot(filepath)
+    # live plot the data
 
 
 if __name__ == "__main__":
