@@ -39,5 +39,3 @@ These commands upgrade pip and install a virtual environment to use for your pyt
 To get all the library packages installed, type pip install -r requirements.txt
 
 Test that programs run correctly.
-
-
