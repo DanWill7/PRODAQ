@@ -28,8 +28,8 @@ def live_plot(filepath: str):
                 ys.append(float(y))
 
         ax1.clear()
-        ax1.set_xlabel("Pressure")
-        ax1.set_ylabel("Thrust")
+        ax1.set_xlabel("Pressure (PSIA)")
+        ax1.set_ylabel("Thrust (LBS)")
         ax1.plot(xs, ys)
 
     ani = animation.FuncAnimation(fig, animate, interval=50)
