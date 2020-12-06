@@ -1,0 +1,4 @@
+.vscode/
+env/
+workspace.code-workspace
+__pycache__
