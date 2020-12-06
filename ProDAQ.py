@@ -12,9 +12,9 @@ def live_plot(filepath: str):
     # This function takes in a file locaction to read data and create a live plot feed.
     style.use('fivethirtyeight')
 
-    
-    fig, axs = plt.subplots(1, 2)
+    fig, axs = plt.subplots(1, 2, facecolor=(.18, .31, .31))
     fig.set_size_inches(18.5, 10.5)
+    fig.suptitle('Motor Chamber Performance Live Feed', color='0.7')
 
     def animate(i):
 
@@ -30,19 +30,23 @@ def live_plot(filepath: str):
                 ys.append(float(y))
                 ts.append(float(t))
 
+        width = 1
         axs[0].clear()
         axs[1].clear()
-        axs[1].plot(ts, ys, color='green')
-        axs[0].plot(ts, xs, color='red')
-        axs[0].set_xlabel("Time (Seconds)")
-        axs[0].set_ylabel("Pressure (PSIA)")
-        axs[1].set_xlabel("Time (Seconds)")
-        axs[1].set_ylabel("Thrust (LBS)")
-        #fig.tight_layout()
-        #fig = plt.gcf()
-        
+        axs[0].set_facecolor('#eafff5')
+        axs[1].set_facecolor('#eafff5')
+        axs[1].plot(ts, ys, 'xkcd:crimson', linewidth=width)
+        axs[0].plot(ts, xs, 'xkcd:crimson', linewidth=width)
+        axs[0].set_xlabel("Time (Seconds)", color='c')
+        axs[0].set_ylabel("Pressure (PSIA)", color='peachpuff')
+        axs[1].set_xlabel("Time (Seconds)", color='c')
+        axs[1].set_ylabel("Thrust (LBS)", color='peachpuff')
+        axs[0].tick_params(labelcolor='tab:orange')
+        axs[1].tick_params(labelcolor='tab:orange')
 
-    ani = animation.FuncAnimation(fig, animate, interval=50)
+    ani = animation.FuncAnimation(fig, animate, interval=100)
+    mng = plt.get_current_fig_manager()
+    mng.full_screen_toggle()
     plt.show()
 
     return
