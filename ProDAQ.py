@@ -8,10 +8,6 @@ from matplotlib import lines, style
 import random as r
 
 
-def test():
-    return 5
-
-
 def live_plot(filepath: str):
     # This function takes in a file locaction to read data and create a live plot feed.
     style.use('fivethirtyeight')
@@ -20,7 +16,7 @@ def live_plot(filepath: str):
     ax1 = fig.add_subplot(1, 1, 1)
 
     def animate(i):
-        
+
         graph_data = open(filepath, 'r').read()
         lines = graph_data.split('\n')
         xs = []
@@ -30,11 +26,16 @@ def live_plot(filepath: str):
                 x, y = line.split(',')
                 xs.append(float(x))
                 ys.append(float(y))
-        
+
         ax1.clear()
+        ax1.set_xlabel("Pressure")
+        ax1.set_ylabel("Thrust")
         ax1.plot(xs, ys)
 
-    ani = animation.FuncAnimation(fig, animate, interval=1000)
+    ani = animation.FuncAnimation(fig, animate, interval=50)
+    fig.tight_layout()
+    fig.set_size_inches(18.5, 10.5)
+    fig = plt.gcf()
     plt.show()
 
     return

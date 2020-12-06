@@ -7,6 +7,7 @@ import ProDAQ as daq
 
 
 def main():
+
     filepath = "test.txt"
     # location of txt file with data
     daq.live_plot(filepath)
