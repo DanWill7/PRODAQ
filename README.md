@@ -1,8 +1,8 @@
 # PRODAQ
 
-Author: Daniel Williams
+Authors: Daniel Williams and Jake Blocker
 
-Last Updated: 12/5/2020
+Last Updated: 12/6/2020
 
 Propulsion Tool to provide live data analysis of SRAD motor chamber pressurizations.
 
