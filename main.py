@@ -2,15 +2,13 @@
 # Author: Daniel Williams
 # Date Created: 12/5/2020 5:42PM
 
-import ProDAQ as daq
+import gui
 
 
 def main():
 
-    filepath = "test.txt"
-    # location of txt file with data
-    daq.live_plot(filepath)
-    # live plot the data
+    gui.run_gui()
+    # calls the program housing the gui before live plotting
 
 
 if __name__ == "__main__":
