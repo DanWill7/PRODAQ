@@ -1,4 +1,4 @@
-# File to run GUI menu before live plotting
+# File to run GUI menu before live plotting and provide a front end to the user
 # Author: Daniel Williams
 # Date Created: 12/6/2020 10:04PM
 

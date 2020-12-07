@@ -1,4 +1,4 @@
-# UDFs for PRODAQ the application to be used in main.py
+# UDFs that provide functionality for PRODAQ the application to be used in main.py
 # Author: Daniel Williams
 # Date Created: 12/5/2020 6:31PM
 
